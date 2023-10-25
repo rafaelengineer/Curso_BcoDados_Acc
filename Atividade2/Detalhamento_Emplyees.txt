@@ -1,0 +1,13 @@
+1ª Forma Normal (1NF):
+Na 1NF, cada coluna contém apenas valores atômicos (indivisíveis), e cada linha é identificável de forma exclusiva. Como os dados parecem estar em forma de tabela, eles já estão em 1NF.
+
+2ª Forma Normal (2NF):
+A 2NF é obtida quando a tabela está em 1NF e todos os atributos que não são chaves são totalmente dependentes funcionalmente da chave primária inteira.
+
+Minha ideia é criar duas tabelas: Employees e Salaries.
+Separando as informações sobre os funcionários das informações relacionadas a salários.
+
+3ª Forma Normal (3NF):
+Na 3NF, os dados devem estar na 2NF e não deve haver dependências transitivas entre atributos que não sejam chaves.
+
+Minha ideia uma tabela separada para as informações do cargo.

@@ -1,0 +1,16 @@
+1ª Forma Normal (1NF):
+
+Na 1NF, cada coluna contém apenas valores atômicos (indivisíveis), e cada linha é identificável de forma exclusiva.
+Nesse caso, os dados já estão em 1NF, pois cada coluna contém valores atômicos, e a coluna "cod.Cliente" pode servir como chave primária.
+
+2ª Forma Normal (2NF):
+A 2NF é obtida quando a tabela está em 1NF e todos os atributos que não são chaves são totalmente dependentes funcionalmente da chave primária inteira.
+
+usando "cod.Cliente" como chave primária.
+"Tipo", "Endereço", "Telefone", "Nome" dependem do "cód.Cliente".
+"CNPJ" e "IE" dependem do "cód.Cliente", mas somente para pessoas jurídicas ("Juridica"). Sendo o mesmo para , "CPF" e "RG" e pessoas físicas.
+Assim é dividir os dados em duas tabelas: uma para pessoas físicas ("Fisica") e outra para pessoas jurídicas ("Juridica"). Cada tabela terá uma chave primária de "cod.Cliente".
+
+3ª Forma Normal (3NF):
+Na 3NF, os dados devem estar na 2NF e não deve haver dependências transitivas entre atributos que não sejam chaves.
+Nesse caso, não há dependências transitivas e os dados já estão em 3NF.
