@@ -1,0 +1,23 @@
+Aqui estão as traduções dos seus exemplos para MQL:
+
+c. SELECT * FROM contato WHERE estado = “Rio de Janeiro”;
+
+db.contato.find({estado: "Rio de Janeiro"});
+d. SELECT * FROM contato WHERE nome LIKE “Luis%;
+
+db.contato.find({nome: {"$regex": "^Luis.*"});
+e. SELECT * FROM contato WHERE idade > 18 AND idade < 50;
+
+db.contato.find({idade: {"$gt": 18, "$lt": 50}});
+f. SELECT * FROM contato WHERE cidade = “Belo Horizonte” ORDER BY nome ASC;
+
+db.contato.find({cidade: "Belo Horizonte"}).sort({nome: 1});
+g. SELECT * FROM contato WHERE cidade = “Recife” ORDER BY nome DESC;
+
+db.contato.find({cidade: "Recife"}).sort({nome: -1});
+h. UPDATE contato SET estado = “São Paulo” WHERE cidade = “Campinas”;
+
+db.contato.update({cidade: "Campinas"}, {estado: "São Paulo"});
+i. DELETE FROM contato WHERE estado = “Minas Gerais“;
+
+db.contato.remove({estado: "Minas Gerais"});
